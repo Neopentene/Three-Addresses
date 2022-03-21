@@ -1,0 +1,7 @@
+1. x = a + c - b * d
+2. x = a * c + w * g / e * a
+3. x = q / r + p - o
+.
+.
+.
+etc
