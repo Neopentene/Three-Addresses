@@ -20,3 +20,4 @@ py three_address.py
 1. Enter a valid expression for evaluation otherwise the code will generate errors or unexpected results
 2. An output file called ```intermediate_code_output.txt``` will be generated in the same directory as the python file
 3. This code does not work for negative numbers, irrational numbers, rational numbers and for numbers not in range(0, 10)
+4. Feel free to launch a PR for any changes or additions to the code
