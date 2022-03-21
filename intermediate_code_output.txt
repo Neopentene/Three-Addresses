@@ -1,5 +1,5 @@
 The results are for the following expression:
---> a+c-b*d
+--> x = a + c - b * d
 
 The expression was evaluated to the following postfix:
 --> acbd*-+

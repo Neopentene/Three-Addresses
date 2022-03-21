@@ -3,7 +3,7 @@ import prettytable
 
 class IntermediateCode:
     def __init__(self, expression: str):
-        self.expression = expression
+        self.original_expression = expression
         expression = expression.replace(" ", "").split(sep="=", maxsplit=1)
         self.expression = expression[1]
         self.assignment_var = expression[0]
@@ -152,7 +152,8 @@ if __name__ == '__main__':
     print(machine_code_prettytable.get_string())
 
     with open('intermediate_code_output.txt', 'w+') as file:
-        file.write("The results are for the following expression:\n--> " + intermediate_code.expression + "\n\n")
+        file.write(
+            "The results are for the following expression:\n--> " + intermediate_code.original_expression + "\n\n")
         file.write("The expression was evaluated to the following postfix:\n--> " + "".join(postfix) + "\n\n")
         file.write("Intermediate Code:\n")
         file.write(intermediate_code_prettytable.get_string() + "\n\n")
