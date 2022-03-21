@@ -1,0 +1,35 @@
+The results are for the following expression:
+--> a+c-b*d
+
+The expression was evaluated to the following postfix:
+--> acbd*-+
+
+Intermediate Code:
++--------+----------+---------+---------+
+| result | operator | arg - 2 | arg - 1 |
++--------+----------+---------+---------+
+|   t1   |    *     |    d    |    b    |
+|   t2   |    -     |    t1   |    c    |
+|   t3   |    +     |    t2   |    a    |
+|   x    |    =     |    ?    |    t3   |
++--------+----------+---------+---------+
+
+Machine Code:
++--------------+
+| Machine Code |
++--------------+
+|  MOV R0, b   |
+|  MULT R0, d  |
+|  MOV t1, R0  |
+|              |
+|  MOV R0, c   |
+|  SUB R0, t1  |
+|  MOV t2, R0  |
+|              |
+|  MOV R0, a   |
+|  ADD R0, t2  |
+|  MOV t3, R0  |
+|              |
+|  MOV x, t3   |
++--------------+
+
